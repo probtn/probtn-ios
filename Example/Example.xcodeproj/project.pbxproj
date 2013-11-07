@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		406812E317FB6C1F009EE02E /* libProBtn-1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 406812E017FB6C1F009EE02E /* libProBtn-1.0.a */; };
 		406812E817FB6C83009EE02E /* ProBtnAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E517FB6C83009EE02E /* ProBtnAppDelegate.m */; };
 		406812E917FB6C83009EE02E /* ProBtnControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E717FB6C83009EE02E /* ProBtnControlViewController.m */; };
+		40DB19B2182C449800BA4CC1 /* libProBtn-1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DB19B1182C449800BA4CC1 /* libProBtn-1.1.a */; };
+		40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */; };
 		7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7531A60B17CE0823007D46CC /* QuartzCore.framework */; };
 		7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E40A3A178D4D55003B5AF9 /* CoreGraphics.framework */; };
 		7585FE2117B37DE6000FCFC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7585FE1817B37DE6000FCFC2 /* InfoPlist.strings */; };
@@ -35,6 +36,8 @@
 		406812E517FB6C83009EE02E /* ProBtnAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProBtnAppDelegate.m; sourceTree = "<group>"; };
 		406812E617FB6C83009EE02E /* ProBtnControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProBtnControlViewController.h; sourceTree = "<group>"; };
 		406812E717FB6C83009EE02E /* ProBtnControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProBtnControlViewController.m; sourceTree = "<group>"; };
+		40DB19B1182C449800BA4CC1 /* libProBtn-1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.1.a"; sourceTree = "<group>"; };
+		40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		40E40A33178D4D55003B5AF9 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E40A36178D4D55003B5AF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40E40A38178D4D55003B5AF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,7 +68,8 @@
 				75999B0217A1631700BB9132 /* UIKit.framework in Frameworks */,
 				7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */,
 				75999B0117A1630D00BB9132 /* CoreLocation.framework in Frameworks */,
-				406812E317FB6C1F009EE02E /* libProBtn-1.0.a in Frameworks */,
+				40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */,
+				40DB19B2182C449800BA4CC1 /* libProBtn-1.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,7 @@
 		40E40A35178D4D55003B5AF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */,
 				7531A60B17CE0823007D46CC /* QuartzCore.framework */,
 				75CCA843179FE6FC00A4A4E9 /* CoreLocation.framework */,
 				40E40A36178D4D55003B5AF9 /* UIKit.framework */,
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				406812E017FB6C1F009EE02E /* libProBtn-1.0.a */,
+				40DB19B1182C449800BA4CC1 /* libProBtn-1.1.a */,
 				406812E117FB6C1F009EE02E /* ProBtn.h */,
 				406812E217FB6C1F009EE02E /* ProBtnVersion.h */,
 			);
