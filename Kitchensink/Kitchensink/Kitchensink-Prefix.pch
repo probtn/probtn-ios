@@ -1,0 +1,29 @@
+//----------------------------------------------//
+
+#import <Availability.h>
+
+//----------------------------------------------//
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+//----------------------------------------------//
+
+#ifdef __OBJC__
+#   import <Foundation/Foundation.h>
+#   import <UIKit/UIKit.h>
+#endif
+
+//----------------------------------------------//
+
+#define KITCHENSINK_DEMO_MODE_FULL              1
+#define KITCHENSINK_DEMO_MODE_LITE              2
+
+//----------------------------------------------//
+
+#ifndef KITCHENSINK_DEMO_MODE
+#   define KITCHENSINK_DEMO_MODE                KITCHENSINK_DEMO_MODE_LITE
+#endif
+
+//----------------------------------------------//
