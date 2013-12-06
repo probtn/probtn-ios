@@ -11,6 +11,8 @@
     CoreNavigationController* mSurveyViewController;
     CoreNavigationController* mShopViewController;
     CoreNavigationController* mAdvertisingViewController;
+    CoreNavigationController* mChicagoBulls1ViewController;
+    CoreNavigationController* mChicagoBulls2ViewController;
     
     FG_SAFE_UNRETAINED(CoreNavigationController*) mCurrentViewController;
     FG_SAFE_UNRETAINED(UIButton*) mCurrentMenuItem;
@@ -19,6 +21,8 @@
 @property(nonatomic, weak) IBOutlet UIButton* openSurveyPage;
 @property(nonatomic, weak) IBOutlet UIButton* openShopPage;
 @property(nonatomic, weak) IBOutlet UIButton* openAdvertisingPage;
+@property(nonatomic, weak) IBOutlet UIButton* openChicagoBulls1Page;
+@property(nonatomic, weak) IBOutlet UIButton* openChicagoBulls2Page;
 
 - (void)selectMenuItem:(CoreNavigationController*)controller;
 
@@ -41,6 +45,8 @@
     FG_SAFE_RELEASE(mSurveyViewController);
     FG_SAFE_RELEASE(mShopViewController);
     FG_SAFE_RELEASE(mAdvertisingViewController);
+    FG_SAFE_RELEASE(mChicagoBulls1ViewController);
+    FG_SAFE_RELEASE(mChicagoBulls2ViewController);
     FG_SAFE_DEALLOC;
 }
 
@@ -54,6 +60,8 @@
     [self setOpenSurveyPage:nil];
     [self setOpenShopPage:nil];
     [self setOpenAdvertisingPage:nil];
+    [self setOpenChicagoBulls1Page:nil];
+    [self setOpenChicagoBulls2Page:nil];
     
     [super viewDidUnload];
 }
@@ -93,6 +101,28 @@
     return mAdvertisingViewController;
 }
 
+- (CoreNavigationController*)chicagoBulls1ViewController {
+    if(mChicagoBulls1ViewController == nil) {
+        ContentViewController* controller = [ContentViewController controllerWithWindow:[self window]];
+        if(controller != nil) {
+            [controller setContentPreference:[ContentPreference contentPreferenceWithType:ContentPreferenceTypeChicagoBulls1]];
+            mChicagoBulls1ViewController = FG_SAFE_RETAIN([CoreNavigationController controllerWithRootController:controller]);
+        }
+    }
+    return mChicagoBulls1ViewController;
+}
+
+- (CoreNavigationController*)chicagoBulls2ViewController {
+    if(mChicagoBulls2ViewController == nil) {
+        ContentViewController* controller = [ContentViewController controllerWithWindow:[self window]];
+        if(controller != nil) {
+            [controller setContentPreference:[ContentPreference contentPreferenceWithType:ContentPreferenceTypeChicagoBulls2]];
+            mChicagoBulls2ViewController = FG_SAFE_RETAIN([CoreNavigationController controllerWithRootController:controller]);
+        }
+    }
+    return mChicagoBulls2ViewController;
+}
+
 - (CoreNavigationController*)currentViewController {
     if(mCurrentViewController == nil) {
         mCurrentViewController = [self surveyViewController];
@@ -129,6 +159,10 @@
         mCurrentMenuItem = [self openShopPage];
     } else if(controller == mAdvertisingViewController) {
         mCurrentMenuItem = [self openAdvertisingPage];
+    } else if(controller == mChicagoBulls1ViewController) {
+        mCurrentMenuItem = [self openChicagoBulls1Page];
+    } else if(controller == mChicagoBulls2ViewController) {
+        mCurrentMenuItem = [self openChicagoBulls2Page];
     }
     if(mCurrentMenuItem != nil) {
         [mCurrentMenuItem setSelected:YES];
@@ -151,6 +185,15 @@
 - (IBAction)openAdvertisingPagePressed:(id)sender {
     [self openController:[self advertisingViewController]];
 }
+
+- (IBAction)openChicagoBulls1Pressed:(id)sender {
+    [self openController:[self chicagoBulls1ViewController]];
+}
+
+- (IBAction)openChicagoBulls2Pressed:(id)sender {
+    [self openController:[self chicagoBulls2ViewController]];
+}
+
 
 @end
 

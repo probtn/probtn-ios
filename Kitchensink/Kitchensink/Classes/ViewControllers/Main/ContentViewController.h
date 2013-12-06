@@ -7,7 +7,9 @@
 typedef NS_ENUM(NSInteger, ContentPreferenceType) {
     ContentPreferenceTypeSurvey,
     ContentPreferenceTypeShop,
-    ContentPreferenceTypeAdvertising
+    ContentPreferenceTypeAdvertising,
+    ContentPreferenceTypeChicagoBulls1,
+    ContentPreferenceTypeChicagoBulls2,
 };
 
 //----------------------------------------------//
@@ -30,6 +32,8 @@ typedef NS_ENUM(NSInteger, ContentPreferenceType) {
 @property(nonatomic, readonly) UIImage* defaultButtonImage;
 @property(nonatomic, strong) UIImage* buttonImage;
 @property(nonatomic, strong) NSString* buttonImageUrl;
+@property(nonatomic, strong) UIImage* buttonOpenImage;
+@property(nonatomic, strong) NSString* buttonOpenImageUrl;
 @property(nonatomic, assign) CGSize buttonSize;
 
 @property(nonatomic, strong) NSString* contentUrl;

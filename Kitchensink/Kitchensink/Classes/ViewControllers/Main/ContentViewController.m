@@ -19,6 +19,8 @@
     UIImage* mDefaultButtonImage;
     UIImage* mButtonImage;
     NSString* mButtonImageUrl;
+    UIImage* mButtonOpenImage;
+    NSString* mButtonOpenImageUrl;
     CGSize mButtonSize;
     NSString* mContentUrl;
     CGSize mContentSize;
@@ -53,6 +55,8 @@
 @synthesize defaultButtonImage = mDefaultButtonImage;
 @synthesize buttonImage = mButtonImage;
 @synthesize buttonImageUrl = mButtonImageUrl;
+@synthesize buttonOpenImage = mButtonOpenImage;
+@synthesize buttonOpenImageUrl = mButtonOpenImageUrl;
 @synthesize buttonSize = mButtonSize;
 @synthesize contentUrl = mContentUrl;
 @synthesize contentSize = mContentSize;
@@ -83,6 +87,8 @@
                 mBackgroundChanged = YES;
                 mButtonSize = CGSizeMake(72.0f, 72.0f);
                 mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"shop_button"]);
+                mButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"eqwid_button"]);
+                mButtonOpenImage = FG_SAFE_RETAIN([UIImage imageNamed:@"eqwid_button_active"]);
                 mContentUrl = @"http://app.ecwid.com/jsp/2557211/m";
                 break;
             }
@@ -94,9 +100,34 @@
                 mContentUrl = @"http://m.adidas.com/";
                 break;
             }
+            case ContentPreferenceTypeChicagoBulls1: {
+                mBackgroundUrl = @"http://www.blogabull.com/";
+                mBackgroundChanged = YES;
+                mButtonSize = CGSizeMake(72.0f, 72.0f);
+                mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls1_button"]);
+                mButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls1_button"]);
+                mButtonOpenImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls1_button_active"]);
+                mContentUrl = @"http://m.nike.com/ru/ru_ru/c/running";
+                break;
+            }
+            case ContentPreferenceTypeChicagoBulls2: {
+                mBackgroundUrl = @"http://www.blogabull.com/";
+                mBackgroundChanged = YES;
+                mButtonSize = CGSizeMake(72.0f, 72.0f);
+                mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls2_button"]);
+                mButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls2_button"]);
+                mButtonOpenImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls2_button_active"]);
+                mContentUrl = @"http://www.reebok.com/";
+                break;
+            }
         }
         
-        mButtonImage = FG_SAFE_RETAIN(mDefaultButtonImage);
+        if(mButtonImage == nil) {
+            mButtonImage = FG_SAFE_RETAIN(mDefaultButtonImage);
+        }
+        if(mButtonOpenImage == nil) {
+            mButtonOpenImage = FG_SAFE_RETAIN(mDefaultButtonImage);
+        }
         
         id< ProBtnSettings > settings = [ProBtn defaultSettings];
         if(settings != nil) {
@@ -114,6 +145,8 @@
     FG_SAFE_RELEASE(mDefaultButtonImage);
     FG_SAFE_RELEASE(mButtonImage);
     FG_SAFE_RELEASE(mButtonImageUrl);
+    FG_SAFE_RELEASE(mButtonOpenImage);
+    FG_SAFE_RELEASE(mButtonOpenImageUrl);
     FG_SAFE_RELEASE(mContentUrl);
     FG_SAFE_RELEASE(mHintText);
     FG_SAFE_DEALLOC;
@@ -144,6 +177,14 @@
             [[mContentViewController navigationItem] setTitle:NSLocalizedString(@"Advertising", nil)];
             break;
         }
+        case ContentPreferenceTypeChicagoBulls1: {
+            [[mContentViewController navigationItem] setTitle:NSLocalizedString(@"Chickago Bulls", nil)];
+            break;
+        }
+        case ContentPreferenceTypeChicagoBulls2: {
+            [[mContentViewController navigationItem] setTitle:NSLocalizedString(@"Chickago Bulls", nil)];
+            break;
+        }
     }
     
     if(mBackgroundChanged == YES) {
@@ -155,7 +196,7 @@
     if(settings != nil) {
         [settings setButtonImage:mButtonImage];
         [settings setButtonDragImage:mButtonImage];
-        [settings setButtonOpenImage:mButtonImage];
+        [settings setButtonOpenImage:mButtonOpenImage];
         [settings setButtonSize:mButtonSize];
         [settings setButtonDragSize:CGSizeMake(mButtonSize.width + 4.0f, mButtonSize.height + 4.0f)];
         [settings setButtonOpenSize:CGSizeMake(mButtonSize.width + 2.0f, mButtonSize.height + 2.0f)];
@@ -171,6 +212,8 @@
         case ContentPreferenceTypeSurvey: return @"Kitchensink::Survey";
         case ContentPreferenceTypeShop: return @"Kitchensink::Shop";
         case ContentPreferenceTypeAdvertising: return @"Kitchensink::Advertising";
+        case ContentPreferenceTypeChicagoBulls1: return @"Kitchensink::ChicagoBulls1";
+        case ContentPreferenceTypeChicagoBulls2: return @"Kitchensink::ChicagoBulls2";
     }
     return nil;
 }
@@ -192,6 +235,18 @@
                 NSData* buttonImageData = [params objectForKey:@"ButtonImage"];
                 if(buttonImageData != nil) {
                     FG_SAFE_SETTER(mButtonImage, [UIImage imageWithData:buttonImageData scale:2.0f]);
+                }
+            }
+            @catch(NSException *exception) {
+            }
+            NSString* buttonOpenImageUrl = [params objectForKey:@"ButtonOpenImageUrl"];
+            if(buttonOpenImageUrl != nil) {
+                FG_SAFE_SETTER(mButtonOpenImageUrl, buttonOpenImageUrl);
+            }
+            @try {
+                NSData* buttonOpenImageData = [params objectForKey:@"ButtonOpenImage"];
+                if(buttonOpenImageData != nil) {
+                    FG_SAFE_SETTER(mButtonOpenImage, [UIImage imageWithData:buttonOpenImageData scale:2.0f]);
                 }
             }
             @catch(NSException *exception) {
@@ -234,6 +289,21 @@
                             NSData* imageData = UIImagePNGRepresentation(mButtonImage);
                             if(imageData != nil) {
                                 [params setObject:mButtonImage forKey:@"ButtonImage"];
+                            }
+                        }
+                        @catch(NSException *exception) {
+                        }
+                    }
+                }
+                if(mButtonOpenImage != nil) {
+                    if(mButtonOpenImageUrl != nil) {
+                        [params setObject:mButtonOpenImageUrl forKey:@"ButtonOpenImageUrl"];
+                    }
+                    if(mButtonOpenImage != mDefaultButtonImage) {
+                        @try {
+                            NSData* imageData = UIImagePNGRepresentation(mButtonOpenImage);
+                            if(imageData != nil) {
+                                [params setObject:mButtonOpenImage forKey:@"ButtonOpenImage"];
                             }
                         }
                         @catch(NSException *exception) {
