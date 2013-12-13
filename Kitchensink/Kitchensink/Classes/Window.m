@@ -47,7 +47,7 @@
 #elif (KITCHENSINK_DEMO_MODE == KITCHENSINK_DEMO_MODE_LITE)
         [self setRootViewController:[self mainNavigationControler]];
         [ProBtn setAvailableOrientations:ProBtnInterfaceOrientationMaskAll];
-        [ProBtn open];
+        //[ProBtn open];
 #endif
     }
     return self;

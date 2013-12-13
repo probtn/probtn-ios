@@ -15,6 +15,7 @@
 
 @interface MainMenuController : CoreViewController
 
+@property(nonatomic, readonly) CoreNavigationController* clearViewController;
 @property(nonatomic, readonly) CoreNavigationController* surveyViewController;
 @property(nonatomic, readonly) CoreNavigationController* shopViewController;
 @property(nonatomic, readonly) CoreNavigationController* advertisingViewController;

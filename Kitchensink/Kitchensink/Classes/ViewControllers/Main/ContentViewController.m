@@ -107,7 +107,8 @@
                 mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls1_button"]);
                 mButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls1_button"]);
                 mButtonOpenImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls1_button_active"]);
-                mContentUrl = @"http://m.nike.com/ru/ru_ru/c/running";
+                mContentUrl = @"http://shop.bulls.com/";
+                mHintText = @"Chicago Bulls";
                 break;
             }
             case ContentPreferenceTypeChicagoBulls2: {
@@ -117,7 +118,8 @@
                 mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls2_button"]);
                 mButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls2_button"]);
                 mButtonOpenImage = FG_SAFE_RETAIN([UIImage imageNamed:@"chicago_bulls2_button_active"]);
-                mContentUrl = @"http://www.reebok.com/";
+                mContentUrl = @"http://store.nba.com/partnerID/13558/Chicago_Bulls_Gear/";
+                mHintText = @"Chicago Bulls";
                 break;
             }
         }
@@ -132,7 +134,9 @@
         id< ProBtnSettings > settings = [ProBtn defaultSettings];
         if(settings != nil) {
             mContentSize = [settings contentSize];
-            mHintText = FG_SAFE_RETAIN([settings hintText]);
+            if(mHintText == nil) {
+                mHintText = FG_SAFE_RETAIN([settings hintText]);
+            }
         }
         
         [self loadFromSetting];

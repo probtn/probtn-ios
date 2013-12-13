@@ -26,7 +26,7 @@
 
 - (id)initWithWindow:(Window*)window {
     MainMenuController* menuController = [MainMenuController controllerWithWindow:window];
-    self = [super initWithMenuViewController:menuController contentViewController:[menuController currentViewController]];
+    self = [super initWithMenuViewController:menuController contentViewController:[menuController clearViewController]];
     if(self != nil) {
         mWindow = window;
 #if (KITCHENSINK_DEMO_MODE == KITCHENSINK_DEMO_MODE_LITE)

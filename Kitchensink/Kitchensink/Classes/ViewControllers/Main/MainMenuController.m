@@ -7,7 +7,13 @@
 
 //----------------------------------------------//
 
+#import "ProBtn.h"
+
+//----------------------------------------------//
+
+
 @interface MainMenuController () {
+    CoreNavigationController* mClearViewController;
     CoreNavigationController* mSurveyViewController;
     CoreNavigationController* mShopViewController;
     CoreNavigationController* mAdvertisingViewController;
@@ -42,6 +48,7 @@
 }
 
 - (void)dealloc {
+    FG_SAFE_RELEASE(mClearViewController);
     FG_SAFE_RELEASE(mSurveyViewController);
     FG_SAFE_RELEASE(mShopViewController);
     FG_SAFE_RELEASE(mAdvertisingViewController);
@@ -53,7 +60,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self selectMenuItem:mCurrentViewController];
+    //[self selectMenuItem:mCurrentViewController];
 }
 
 - (void)viewDidUnload {
@@ -67,6 +74,16 @@
 }
 
 #pragma mark - Property
+
+- (CoreNavigationController*)clearViewController {
+    if(mClearViewController == nil) {
+        ContentViewController* controller = [ContentViewController controllerWithWindow:[self window]];
+        if(controller != nil) {
+            mClearViewController = FG_SAFE_RETAIN([CoreNavigationController controllerWithRootController:controller]);
+        }
+    }
+    return mClearViewController;
+}
 
 - (CoreNavigationController*)surveyViewController {
     if(mSurveyViewController == nil) {
@@ -125,7 +142,7 @@
 
 - (CoreNavigationController*)currentViewController {
     if(mCurrentViewController == nil) {
-        mCurrentViewController = [self surveyViewController];
+        mCurrentViewController = [self clearViewController];
         
         [self selectMenuItem:mCurrentViewController];
     }
@@ -136,6 +153,9 @@
 
 - (void)openController:(CoreNavigationController*)controller {
     if(mCurrentViewController != controller) {
+        if([ProBtn isOpened] == NO) {
+            [ProBtn open];
+        }
         mCurrentViewController = controller;
         
         if([mCurrentViewController isViewLoaded] == YES) {

@@ -123,7 +123,7 @@
 		408AD0A3180EE35700D49116 /* navbar_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_menu@2x.png"; sourceTree = "<group>"; };
 		408AD0A5180EE4A800D49116 /* button_menu_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_menu_normal@2x.png"; sourceTree = "<group>"; };
 		408AD0A6180EE4A800D49116 /* button_menu_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_menu_select@2x.png"; sourceTree = "<group>"; };
-		40B824A2180BCB4300DDA03A /* kitchensink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitchensink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B824A2180BCB4300DDA03A /* kitchensink-chicagobulls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kitchensink-chicagobulls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B824A5180BCB4300DDA03A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		40B824A7180BCB4300DDA03A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		40B824A9180BCB4300DDA03A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -365,7 +365,7 @@
 		40B824A3180BCB4300DDA03A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40B824A2180BCB4300DDA03A /* kitchensink.app */,
+				40B824A2180BCB4300DDA03A /* kitchensink-chicagobulls.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -428,7 +428,7 @@
 			);
 			name = Kitchensink;
 			productName = Kitchensink;
-			productReference = 40B824A2180BCB4300DDA03A /* kitchensink.app */;
+			productReference = 40B824A2180BCB4300DDA03A /* kitchensink-chicagobulls.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -650,7 +650,7 @@
 					"$(SRCROOT)/../Library/",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = kitchensink;
+				PRODUCT_NAME = "kitchensink-chicagobulls";
 				PROVISIONING_PROFILE = "A5BDF0BF-35A2-43E7-AB10-F379657FAF7F";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
@@ -674,8 +674,8 @@
 					"$(SRCROOT)/../Library/",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = kitchensink;
-				PROVISIONING_PROFILE = "996A260D-19D3-4BC8-8AB4-57783F4FF9B8";
+				PRODUCT_NAME = "kitchensink-chicagobulls";
+				PROVISIONING_PROFILE = "C28EDD0F-0C1D-48F0-B235-48A3886DBD58";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
