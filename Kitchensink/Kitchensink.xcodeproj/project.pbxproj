@@ -123,7 +123,7 @@
 		408AD0A3180EE35700D49116 /* navbar_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_menu@2x.png"; sourceTree = "<group>"; };
 		408AD0A5180EE4A800D49116 /* button_menu_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_menu_normal@2x.png"; sourceTree = "<group>"; };
 		408AD0A6180EE4A800D49116 /* button_menu_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_menu_select@2x.png"; sourceTree = "<group>"; };
-		40B824A2180BCB4300DDA03A /* kitchensink-chicagobulls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kitchensink-chicagobulls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B824A2180BCB4300DDA03A /* kitchensink-ecwid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kitchensink-ecwid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B824A5180BCB4300DDA03A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		40B824A7180BCB4300DDA03A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		40B824A9180BCB4300DDA03A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -365,7 +365,7 @@
 		40B824A3180BCB4300DDA03A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				40B824A2180BCB4300DDA03A /* kitchensink-chicagobulls.app */,
+				40B824A2180BCB4300DDA03A /* kitchensink-ecwid.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -428,7 +428,7 @@
 			);
 			name = Kitchensink;
 			productName = Kitchensink;
-			productReference = 40B824A2180BCB4300DDA03A /* kitchensink-chicagobulls.app */;
+			productReference = 40B824A2180BCB4300DDA03A /* kitchensink-ecwid.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -439,6 +439,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = probtn;
+				TargetAttributes = {
+					40B824A1180BCB4300DDA03A = {
+						DevelopmentTeam = 69MLH8NUC5;
+					};
+				};
 			};
 			buildConfigurationList = 40B8249D180BCB4300DDA03A /* Build configuration list for PBXProject "Kitchensink" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -640,6 +645,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Константин Тупицин (4E5R4UN7F3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Константин Тупицин (4E5R4UN7F3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kitchensink/Kitchensink-Prefix.pch";
 				INFOPLIST_FILE = "Kitchensink/Kitchensink-Info.plist";
@@ -650,8 +656,8 @@
 					"$(SRCROOT)/../Library/",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "kitchensink-chicagobulls";
-				PROVISIONING_PROFILE = "A5BDF0BF-35A2-43E7-AB10-F379657FAF7F";
+				PRODUCT_NAME = "kitchensink-ecwid";
+				PROVISIONING_PROFILE = "7DC29D43-DA95-4DD1-A3E7-4BAC6EC9F947";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
@@ -664,6 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Havevalue Ltd (69MLH8NUC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Havevalue Ltd (69MLH8NUC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kitchensink/Kitchensink-Prefix.pch";
 				INFOPLIST_FILE = "Kitchensink/Kitchensink-Info.plist";
@@ -674,8 +681,8 @@
 					"$(SRCROOT)/../Library/",
 				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "kitchensink-chicagobulls";
-				PROVISIONING_PROFILE = "C28EDD0F-0C1D-48F0-B235-48A3886DBD58";
+				PRODUCT_NAME = "kitchensink-ecwid";
+				PROVISIONING_PROFILE = "0B3C501A-2FF7-4983-8A8A-6C31D589C8CA";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;

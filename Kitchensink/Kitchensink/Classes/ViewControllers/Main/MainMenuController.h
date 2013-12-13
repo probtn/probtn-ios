@@ -19,8 +19,8 @@
 @property(nonatomic, readonly) CoreNavigationController* surveyViewController;
 @property(nonatomic, readonly) CoreNavigationController* shopViewController;
 @property(nonatomic, readonly) CoreNavigationController* advertisingViewController;
-@property(nonatomic, readonly) CoreNavigationController* chicagoBulls1ViewController;
-@property(nonatomic, readonly) CoreNavigationController* chicagoBulls2ViewController;
+/*@property(nonatomic, readonly) CoreNavigationController* chicagoBulls1ViewController;
+@property(nonatomic, readonly) CoreNavigationController* chicagoBulls2ViewController;*/
 
 @property(nonatomic, readonly) CoreNavigationController* currentViewController;
 

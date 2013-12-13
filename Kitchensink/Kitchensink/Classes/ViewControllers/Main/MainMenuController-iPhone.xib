@@ -8,8 +8,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuController">
             <connections>
                 <outlet property="openAdvertisingPage" destination="rAZ-wa-L1s" id="5Rv-Cn-Jt4"/>
-                <outlet property="openChicagoBulls1Page" destination="eqH-tC-3oB" id="iAd-5M-VlK"/>
-                <outlet property="openChicagoBulls2Page" destination="yHd-UA-zHI" id="KYe-rV-GwM"/>
                 <outlet property="openShopPage" destination="pqG-6s-8TO" id="JmS-JF-S2F"/>
                 <outlet property="openSurveyPage" destination="YUk-Qv-xQj" id="Ue3-Eh-ZKv"/>
                 <outlet property="view" destination="28" id="85"/>
@@ -63,32 +61,6 @@
                                 <action selector="openAdvertisingPagePressed:" destination="-1" eventType="touchUpInside" id="hu6-7u-I51"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eqH-tC-3oB" customClass="ButtonMenu">
-                            <rect key="frame" x="0.0" y="144" width="280" height="48"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
-                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="CHICAGO BULLS" image="icon_chicago_bulls1.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="openChicagoBulls1Pressed:" destination="-1" eventType="touchUpInside" id="SY3-sq-8o2"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yHd-UA-zHI" customClass="ButtonMenu">
-                            <rect key="frame" x="0.0" y="192" width="280" height="48"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
-                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="CHICAGO BULLS" image="icon_chicago_bulls2.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="openChicagoBulls2Pressed:" destination="-1" eventType="touchUpInside" id="OTL-nQ-IHn"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
@@ -99,8 +71,6 @@
     </objects>
     <resources>
         <image name="icon_advertising.png" width="32" height="32"/>
-        <image name="icon_chicago_bulls1.png" width="32" height="32"/>
-        <image name="icon_chicago_bulls2.png" width="32" height="32"/>
         <image name="icon_eqwid.png" width="32" height="32"/>
         <image name="icon_survey.png" width="32" height="32"/>
     </resources>
