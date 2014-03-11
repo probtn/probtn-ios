@@ -182,6 +182,10 @@ typedef NS_OPTIONS(NSUInteger, ProBtnInterfaceOrientationMask) {
 
 #if (PROBTN_VERSION >= PROBTN_VERSION_1_1)
 
+/*! Reset button window orientation to portrait
+ */
++ (void)resetOrientation;
+
 /*! Set window status bar style
  @param windowStatusBarStyle status bar style
  */
