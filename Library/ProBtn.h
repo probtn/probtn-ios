@@ -406,6 +406,10 @@ typedef NS_OPTIONS(NSUInteger, ProBtnInterfaceOrientationMask) {
 @property(nonatomic, readwrite, strong) UIImage* contentArrowImageL;
 @property(nonatomic, readwrite, strong) UIImage* contentArrowImageR;
 
+@property(nonatomic, readwrite) BOOL neverClose;
+
+@property(nonatomic, readwrite, strong) NSString* campaignId;
+
 #if (PROBTN_VERSION >= PROBTN_VERSION_1_1)
 @property(nonatomic, readwrite, strong) UIColor* vendorColor;
 @property(nonatomic, readwrite) CGFloat vendorOpacity;

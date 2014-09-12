@@ -8,17 +8,18 @@ Profit Button is a floating interactive element that is used to show custom cont
 
 Real example:
 -----
-![ScreenShot](http://www.probtn.com/wp-content/uploads/2013/09/pizzagif2.gif)
+![ScreenShot](http://www.hintsolutions.ru/gif_shop.gif)
 
 How to use ProBtn SDK
 -----
 
 1. First you have to register on [http://admin.probtn.com](http://admin.probtn.com)
-2. Register your app: create new application, select it's platform (iOs) and fill in your app's BundleId;
-3. Choose the site to promote in your application.
-4. Finally you have to embed ProBtn into your app.
+2. Register your app: create new application, select it's platform (iOS) and fill in your app's BundleId;
+3. Choose the sites to promote in your application.
+4. Set up the targeting.
+5. Finally you have to embed ProBtn into your app.
 
-Integrating ProBtn SDK into your ObjC iOs App
+Integrating ProBtn SDK into your ObjC iOS App
 -----
 
 1. First you are to clone repository or just download the archive to you computer.
@@ -56,6 +57,14 @@ Example:
 Server side
 ---------------
 
+ProBtn can respond to actions from webview. Three type of actions available at this moment:
+
+1. proBtn.hide(); Hide button and content view.
+2. proBtn.hideContent(); Close content view.
+3. proBtn.performAction(); Send event to the server that the user has performed required action for the current campaign. If targeting is properly configured on the server side, next time button is loaded by the user - new campaign will be displayed. If the user has performed required actions for all campaigns available to him, button will not be shown.
+
+All of these actions can be performed from javascript code in your site. For example, you can set action as a listener on button event (see example page at http://nameless-fortress-6801.herokuapp.com/).
+
 All the settings are taken from the server so you can customize the appiarence of the button by simply changing the on the serverside. 
 The server adress is [admin.probtn.com](http://admin.probtn.com). After all the data loaded from the server the button would appear automatically.
 
@@ -73,6 +82,10 @@ Parameters description for ProBtn
 	
 		ButtonEnabled = true // Is active or not. It means could you move it or not
 		ButtonVisible = true // Is visible or not
+
+		NeverClose = false // Is user can close button
+
+		CampaignID = 1234567 // ID of current campaign
 	
 		// Visual settings of the button
 	
