@@ -407,6 +407,7 @@ typedef NS_OPTIONS(NSUInteger, ProBtnInterfaceOrientationMask) {
 @property(nonatomic, readwrite, strong) UIImage* contentArrowImageR;
 
 @property(nonatomic, readwrite) BOOL neverClose;
+@property(nonatomic, readwrite) BOOL openExternal;
 
 @property(nonatomic, readwrite, strong) NSString* campaignId;
 
