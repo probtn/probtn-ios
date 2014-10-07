@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		406812E817FB6C83009EE02E /* ProBtnAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E517FB6C83009EE02E /* ProBtnAppDelegate.m */; };
 		406812E917FB6C83009EE02E /* ProBtnControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E717FB6C83009EE02E /* ProBtnControlViewController.m */; };
-		40DB19B2182C449800BA4CC1 /* libProBtn-1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DB19B1182C449800BA4CC1 /* libProBtn-1.1.a */; };
 		40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */; };
 		7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7531A60B17CE0823007D46CC /* QuartzCore.framework */; };
 		7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E40A3A178D4D55003B5AF9 /* CoreGraphics.framework */; };
@@ -26,6 +25,7 @@
 		7585FE3417B37E45000FCFC2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7585FE3117B37E45000FCFC2 /* Default@2x.png */; };
 		75999B0117A1630D00BB9132 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CCA843179FE6FC00A4A4E9 /* CoreLocation.framework */; };
 		75999B0217A1631700BB9132 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E40A36178D4D55003B5AF9 /* UIKit.framework */; };
+		9AB1D45319E4290E00FBC812 /* libProBtn-1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB1D45219E4290E00FBC812 /* libProBtn-1.2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +57,7 @@
 		7585FE3017B37E45000FCFC2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7585FE3117B37E45000FCFC2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		75CCA843179FE6FC00A4A4E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9AB1D45219E4290E00FBC812 /* libProBtn-1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +68,9 @@
 				7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */,
 				75999B0217A1631700BB9132 /* UIKit.framework in Frameworks */,
 				7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */,
+				9AB1D45319E4290E00FBC812 /* libProBtn-1.2.a in Frameworks */,
 				75999B0117A1630D00BB9132 /* CoreLocation.framework in Frameworks */,
 				40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */,
-				40DB19B2182C449800BA4CC1 /* libProBtn-1.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +167,7 @@
 		7585FE4F17B3959E000FCFC2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				9AB1D45219E4290E00FBC812 /* libProBtn-1.2.a */,
 				406812E017FB6C1F009EE02E /* libProBtn-1.0.a */,
 				40DB19B1182C449800BA4CC1 /* libProBtn-1.1.a */,
 				406812E117FB6C1F009EE02E /* ProBtn.h */,
@@ -357,6 +359,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Library\"",
+					"/Users/hints/HintsProjects/probtn-ios/Library",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Example;
@@ -376,6 +379,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Library\"",
+					"/Users/hints/HintsProjects/probtn-ios/Library",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Example;
