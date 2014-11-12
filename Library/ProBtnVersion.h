@@ -8,11 +8,12 @@
 
 #define PROBTN_VERSION_1_0                      1000
 #define PROBTN_VERSION_1_1                      1100
+#define PROBTN_VERSION_1_2                      1200
 
 //----------------------------------------------//
 
 #ifndef PROBTN_VERSION_LATEST
-#   define PROBTN_VERSION_LATEST                PROBTN_VERSION_1_1
+#   define PROBTN_VERSION_LATEST                PROBTN_VERSION_1_2
 #endif
 
 //----------------------------------------------//

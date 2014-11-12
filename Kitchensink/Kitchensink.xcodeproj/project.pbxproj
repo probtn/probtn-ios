@@ -26,7 +26,6 @@
 		4080C98A180EBB2000B22B7D /* LaunchNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4080C989180EBB2000B22B7D /* LaunchNavigationController.m */; };
 		4080C990180EBE7400B22B7D /* Buttons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4080C98D180EBE7400B22B7D /* Buttons.m */; };
 		4080C991180EBE7400B22B7D /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4080C98F180EBE7400B22B7D /* NavigationBar.m */; };
-		4083638E183CC92500BDF636 /* libProBtn-1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4083638A183CC92500BDF636 /* libProBtn-1.1.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		408A7596180D2D5B00BBD08D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40B824AE180BCB4300DDA03A /* InfoPlist.strings */; };
 		408A7597180D2D5E00BBD08D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4051AE9C180BD70F00C6D50B /* Localizable.strings */; };
 		408AD090180ED08900D49116 /* ContentViewController-iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408AD08D180ED08900D49116 /* ContentViewController-iPhone.xib */; };
@@ -56,6 +55,7 @@
 		40E69776180F2C3B00F01318 /* LaunchViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69775180F2C3B00F01318 /* LaunchViewController-iPad.xib */; };
 		40E69778180F2D2400F01318 /* ContentViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69777180F2D2400F01318 /* ContentViewController-iPad.xib */; };
 		40E6977A180F2D4100F01318 /* MainMenuController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69779180F2D4100F01318 /* MainMenuController-iPad.xib */; };
+		4473101D1A136FB6000F520D /* libProBtn-1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4473101B1A136D5C000F520D /* libProBtn-1.2.a */; };
 		75A92C641850EFA3005D04C1 /* eqwid_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C621850EFA3005D04C1 /* eqwid_button_active@2x.png */; };
 		75A92C651850EFA3005D04C1 /* eqwid_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C631850EFA3005D04C1 /* eqwid_button@2x.png */; };
 		75A92C6C1851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C681851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png */; };
@@ -143,6 +143,7 @@
 		40E69775180F2C3B00F01318 /* LaunchViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "LaunchViewController-iPad.xib"; sourceTree = "<group>"; };
 		40E69777180F2D2400F01318 /* ContentViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ContentViewController-iPad.xib"; sourceTree = "<group>"; };
 		40E69779180F2D4100F01318 /* MainMenuController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainMenuController-iPad.xib"; sourceTree = "<group>"; };
+		4473101B1A136D5C000F520D /* libProBtn-1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.a"; sourceTree = "<group>"; };
 		75A92C621850EFA3005D04C1 /* eqwid_button_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eqwid_button_active@2x.png"; sourceTree = "<group>"; };
 		75A92C631850EFA3005D04C1 /* eqwid_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eqwid_button@2x.png"; sourceTree = "<group>"; };
 		75A92C681851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicago_bulls2_button_active@2x.png"; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4473101D1A136FB6000F520D /* libProBtn-1.2.a in Frameworks */,
 				40DB19AE182C353300BA4CC1 /* SystemConfiguration.framework in Frameworks */,
 				40B824A6180BCB4300DDA03A /* Foundation.framework in Frameworks */,
 				40B824ED180BCB7500DDA03A /* CoreLocation.framework in Frameworks */,
@@ -167,7 +169,6 @@
 				40B824AA180BCB4300DDA03A /* UIKit.framework in Frameworks */,
 				406174311817DD9B0098E72A /* CoreTelephony.framework in Frameworks */,
 				405567D81817FB2500AFDFC8 /* AdSupport.framework in Frameworks */,
-				4083638E183CC92500BDF636 /* libProBtn-1.1.a in Frameworks */,
 				405567D61817FB1B00AFDFC8 /* libz.dylib in Frameworks */,
 				405567D21817FA4500AFDFC8 /* libTestFlight.a in Frameworks */,
 			);
@@ -328,6 +329,7 @@
 		40836388183CC92500BDF636 /* ProBtn */ = {
 			isa = PBXGroup;
 			children = (
+				4473101B1A136D5C000F520D /* libProBtn-1.2.a */,
 				40836389183CC92500BDF636 /* libProBtn-1.0.a */,
 				4083638A183CC92500BDF636 /* libProBtn-1.1.a */,
 				4083638B183CC92500BDF636 /* ProBtn.h */,
@@ -642,8 +644,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Константин Тупицин (4E5R4UN7F3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Константин Тупицин (4E5R4UN7F3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Виктор Баранов (TPRSB8UTXR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Виктор Баранов (TPRSB8UTXR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kitchensink/Kitchensink-Prefix.pch";
 				INFOPLIST_FILE = "Kitchensink/Kitchensink-Info.plist";
@@ -655,7 +657,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "4C858F2F-9FE2-4FA1-BE32-437FBCB190BD";
+				PROVISIONING_PROFILE = "ab1a465b-4e94-4178-9514-189c02320aa9";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
@@ -680,7 +682,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "5B2A3016-F9C5-4095-ADCB-452FE98F37D4";
+				PROVISIONING_PROFILE = "ef01bb8f-032a-4f98-be3f-f27a5b77b456";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
