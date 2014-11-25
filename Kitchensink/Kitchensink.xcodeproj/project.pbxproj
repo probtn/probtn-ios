@@ -55,7 +55,7 @@
 		40E69776180F2C3B00F01318 /* LaunchViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69775180F2C3B00F01318 /* LaunchViewController-iPad.xib */; };
 		40E69778180F2D2400F01318 /* ContentViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69777180F2D2400F01318 /* ContentViewController-iPad.xib */; };
 		40E6977A180F2D4100F01318 /* MainMenuController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69779180F2D4100F01318 /* MainMenuController-iPad.xib */; };
-		4473101D1A136FB6000F520D /* libProBtn-1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4473101B1A136D5C000F520D /* libProBtn-1.2.a */; };
+		44D33FAE1A24CE0F00C417D4 /* libProBtn-1.2.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D33FAD1A24CE0F00C417D4 /* libProBtn-1.2.1.a */; };
 		75A92C641850EFA3005D04C1 /* eqwid_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C621850EFA3005D04C1 /* eqwid_button_active@2x.png */; };
 		75A92C651850EFA3005D04C1 /* eqwid_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C631850EFA3005D04C1 /* eqwid_button@2x.png */; };
 		75A92C6C1851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C681851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png */; };
@@ -144,6 +144,7 @@
 		40E69777180F2D2400F01318 /* ContentViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ContentViewController-iPad.xib"; sourceTree = "<group>"; };
 		40E69779180F2D4100F01318 /* MainMenuController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainMenuController-iPad.xib"; sourceTree = "<group>"; };
 		4473101B1A136D5C000F520D /* libProBtn-1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.a"; sourceTree = "<group>"; };
+		44D33FAD1A24CE0F00C417D4 /* libProBtn-1.2.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.1.a"; sourceTree = "<group>"; };
 		75A92C621850EFA3005D04C1 /* eqwid_button_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eqwid_button_active@2x.png"; sourceTree = "<group>"; };
 		75A92C631850EFA3005D04C1 /* eqwid_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eqwid_button@2x.png"; sourceTree = "<group>"; };
 		75A92C681851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chicago_bulls2_button_active@2x.png"; sourceTree = "<group>"; };
@@ -160,11 +161,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4473101D1A136FB6000F520D /* libProBtn-1.2.a in Frameworks */,
 				40DB19AE182C353300BA4CC1 /* SystemConfiguration.framework in Frameworks */,
 				40B824A6180BCB4300DDA03A /* Foundation.framework in Frameworks */,
 				40B824ED180BCB7500DDA03A /* CoreLocation.framework in Frameworks */,
 				40B824A8180BCB4300DDA03A /* CoreGraphics.framework in Frameworks */,
+				44D33FAE1A24CE0F00C417D4 /* libProBtn-1.2.1.a in Frameworks */,
 				40B824EB180BCB6F00DDA03A /* QuartzCore.framework in Frameworks */,
 				40B824AA180BCB4300DDA03A /* UIKit.framework in Frameworks */,
 				406174311817DD9B0098E72A /* CoreTelephony.framework in Frameworks */,
@@ -329,6 +330,7 @@
 		40836388183CC92500BDF636 /* ProBtn */ = {
 			isa = PBXGroup;
 			children = (
+				44D33FAD1A24CE0F00C417D4 /* libProBtn-1.2.1.a */,
 				4473101B1A136D5C000F520D /* libProBtn-1.2.a */,
 				40836389183CC92500BDF636 /* libProBtn-1.0.a */,
 				4083638A183CC92500BDF636 /* libProBtn-1.1.a */,
@@ -654,6 +656,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Kitchensink/Library/TestFlight/",
 					"$(SRCROOT)/../Library/",
+					"/Users/viktorbaranov/Documents/HintsProjects/probtn-ios/Library",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
@@ -679,6 +682,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/Kitchensink/Library/TestFlight/",
 					"$(SRCROOT)/../Library/",
+					"/Users/viktorbaranov/Documents/HintsProjects/probtn-ios/Library",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
