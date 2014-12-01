@@ -651,7 +651,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kitchensink/Kitchensink-Prefix.pch";
 				INFOPLIST_FILE = "Kitchensink/Kitchensink-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Kitchensink/Library/TestFlight/",
@@ -677,7 +677,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kitchensink/Kitchensink-Prefix.pch";
 				INFOPLIST_FILE = "Kitchensink/Kitchensink-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Kitchensink/Library/TestFlight/",
@@ -686,7 +686,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "ef01bb8f-032a-4f98-be3f-f27a5b77b456";
+				PROVISIONING_PROFILE = "81ee134b-34e4-449f-9d9f-d82f0d038a44";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
