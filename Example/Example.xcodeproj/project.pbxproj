@@ -10,6 +10,7 @@
 		406812E817FB6C83009EE02E /* ProBtnAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E517FB6C83009EE02E /* ProBtnAppDelegate.m */; };
 		406812E917FB6C83009EE02E /* ProBtnControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E717FB6C83009EE02E /* ProBtnControlViewController.m */; };
 		40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */; };
+		44691C6C1A825E2400736084 /* libProBtn-1.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44691C6B1A825E2400736084 /* libProBtn-1.2.3.a */; };
 		7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7531A60B17CE0823007D46CC /* QuartzCore.framework */; };
 		7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E40A3A178D4D55003B5AF9 /* CoreGraphics.framework */; };
 		7585FE2117B37DE6000FCFC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7585FE1817B37DE6000FCFC2 /* InfoPlist.strings */; };
@@ -25,7 +26,6 @@
 		7585FE3417B37E45000FCFC2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7585FE3117B37E45000FCFC2 /* Default@2x.png */; };
 		75999B0117A1630D00BB9132 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CCA843179FE6FC00A4A4E9 /* CoreLocation.framework */; };
 		75999B0217A1631700BB9132 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E40A36178D4D55003B5AF9 /* UIKit.framework */; };
-		9A0DF0101A36355700B3A458 /* libProBtn-1.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0DEFFA1A36259A00B3A458 /* libProBtn-1.2.2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +42,7 @@
 		40E40A36178D4D55003B5AF9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40E40A38178D4D55003B5AF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		40E40A3A178D4D55003B5AF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44691C6B1A825E2400736084 /* libProBtn-1.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.3.a"; sourceTree = "<group>"; };
 		44D33FA81A24CB4C00C417D4 /* libProBtn-1.2.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.1.a"; sourceTree = "<group>"; };
 		7531A60B17CE0823007D46CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7585FE1917B37DE6000FCFC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -67,12 +68,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A0DF0101A36355700B3A458 /* libProBtn-1.2.2.a in Frameworks */,
 				7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */,
 				75999B0217A1631700BB9132 /* UIKit.framework in Frameworks */,
 				7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */,
 				75999B0117A1630D00BB9132 /* CoreLocation.framework in Frameworks */,
 				40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */,
+				44691C6C1A825E2400736084 /* libProBtn-1.2.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +170,7 @@
 		7585FE4F17B3959E000FCFC2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				44691C6B1A825E2400736084 /* libProBtn-1.2.3.a */,
 				9A0DEFFA1A36259A00B3A458 /* libProBtn-1.2.2.a */,
 				44D33FA81A24CB4C00C417D4 /* libProBtn-1.2.1.a */,
 				9AB1D45219E4290E00FBC812 /* libProBtn-1.2.a */,
