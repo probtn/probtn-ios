@@ -664,7 +664,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "ab1a465b-4e94-4178-9514-189c02320aa9";
+				PROVISIONING_PROFILE = "edb25042-96bd-4246-a74e-b3878769ad41";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
@@ -690,7 +690,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "81ee134b-34e4-449f-9d9f-d82f0d038a44";
+				PROVISIONING_PROFILE = "e2a328ff-96e8-4ab2-9e67-699c0dc8b3b2";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
