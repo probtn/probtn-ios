@@ -179,6 +179,7 @@
 - (void)textFieldDidBeginEditing:(UITextField*)textField {
     [[self emptyView] setUserInteractionEnabled:YES];
     mCurrentField = textField;
+    [self enableCurrentTextFieldMenu];
 }
 
 - (void)textFieldDidEndEditing:(UITextField*)textField {
@@ -218,7 +219,9 @@
 }
 
 - (IBAction)onBackgroundUrl:(id)sender {
-    [mContentPreference setBackgroundUrl:[[self backgroundUrl] text]];
+    NSString *url = [[self backgroundUrl] text];
+    NSString *fullUrl = [self addProtocoltoUrl:url forTextField:[self backgroundUrl]];
+    [mContentPreference setBackgroundUrl:fullUrl];
     [mContentPreference applyPreference];
 }
 
@@ -244,7 +247,8 @@
 - (IBAction)onButtonImageUrl:(id)sender {
     NSString* buttonImageUrl = [[self buttonImageUrl] text];
     if([buttonImageUrl length] > 0) {
-        NSURL* url = [NSURL URLWithString:buttonImageUrl];
+        NSString *fullButtonImageUrl = [self addProtocoltoUrl:buttonImageUrl forTextField:[self buttonImageUrl]];
+        NSURL* url = [NSURL URLWithString:fullButtonImageUrl];
         if(url != nil) {
             if([[self buttonImageUrl] leftView] == nil) {
                 UIActivityIndicatorView* activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -261,7 +265,7 @@
                         }
                         dispatch_sync(dispatch_get_main_queue(), ^{
                             if(image != nil) {
-                                [mContentPreference setButtonImageUrl:buttonImageUrl];
+                                [mContentPreference setButtonImageUrl:fullButtonImageUrl];
                                 [mContentPreference setButtonImage:image];
                                 [mContentPreference applyPreference];
                             } else {
@@ -301,7 +305,8 @@
 
 - (IBAction)onContentUrl:(id)sender {
     NSString* contentUrl = [[self contentUrl] text];
-    [mContentPreference setContentUrl:contentUrl];
+    NSString *fullUrl = [self addProtocoltoUrl:contentUrl forTextField:[self contentUrl]];
+    [mContentPreference setContentUrl:fullUrl];
     [mContentPreference applyPreference];
 }
 
@@ -327,8 +332,42 @@
 
 - (IBAction)onTapEmpty:(id)sender {
     if(mCurrentField != nil) {
-        [mCurrentField resignFirstResponder];
+        if (![[mCurrentField text]  isEqual: @""])
+            [mCurrentField resignFirstResponder];
+        else {
+            [self enableCurrentTextFieldMenu];
+        }
     }
+}
+
+- (NSString *)addProtocoltoUrl:(NSString *)url forTextField:(UITextField *)textField {
+    NSString *fullUrl = @"";
+    NSString *protocol = @"http://";
+    if ([url length] > 0) {
+        fullUrl = url;
+        if ([url rangeOfString:protocol].location == NSNotFound) {
+            fullUrl = protocol;
+            fullUrl = [fullUrl stringByAppendingString:url];
+            [textField setText:fullUrl];
+        }
+    }
+    return fullUrl;
+}
+
+- (void)enableCurrentTextFieldMenu {
+    double delayInSeconds = 0.1;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        UIMenuController *menu = [UIMenuController sharedMenuController];
+        if ([[mCurrentField text] length] > 0) {
+            [menu setTargetRect:mCurrentField.frame inView:mCurrentField.superview];
+        } else {
+            CGRect fieldFrame = mCurrentField.frame;
+            CGRect newFrame = CGRectMake((fieldFrame.origin.x - fieldFrame.size.width/2), fieldFrame.origin.y, fieldFrame.size.width, fieldFrame.size.height);
+            [menu setTargetRect:newFrame inView:mCurrentField.superview];
+        }
+        [menu setMenuVisible:YES animated:YES];
+    });
 }
 
 @end

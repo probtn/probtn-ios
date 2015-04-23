@@ -65,10 +65,10 @@
 #pragma mark - Default
 
 + (id)contentPreferenceWithType:(ContentPreferenceType)type {
-    return FG_SAFE_AUTORELEASE([[self alloc] initWithType:type]);
+    return FG_SAFE_AUTORELEASE([[self alloc] initWithContentPreferenceType:type]);
 }
 
-- (id)initWithType:(ContentPreferenceType)type {
+- (id)initWithContentPreferenceType:(ContentPreferenceType)type {
     self = [super init];
     if(self != nil) {
         mType = type;

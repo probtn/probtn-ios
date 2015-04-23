@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, ContentPreferenceType) {
 @property(nonatomic, strong) NSString* hintText;
 
 + (id)contentPreferenceWithType:(ContentPreferenceType)type;
-- (id)initWithType:(ContentPreferenceType)type;
+- (id)initWithContentPreferenceType:(ContentPreferenceType)type;
 
 - (void)applyPreference;
 
