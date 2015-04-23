@@ -292,7 +292,7 @@
                         @try {
                             NSData* imageData = UIImagePNGRepresentation(mButtonImage);
                             if(imageData != nil) {
-                                [params setObject:mButtonImage forKey:@"ButtonImage"];
+                                [params setObject:imageData forKey:@"ButtonImage"];
                             }
                         }
                         @catch(NSException *exception) {
@@ -307,7 +307,7 @@
                         @try {
                             NSData* imageData = UIImagePNGRepresentation(mButtonOpenImage);
                             if(imageData != nil) {
-                                [params setObject:mButtonOpenImage forKey:@"ButtonOpenImage"];
+                                [params setObject:imageData forKey:@"ButtonOpenImage"];
                             }
                         }
                         @catch(NSException *exception) {

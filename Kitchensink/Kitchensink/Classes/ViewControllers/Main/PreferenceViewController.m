@@ -7,10 +7,11 @@
 //----------------------------------------------//
 
 #import "ProBtn.h"
+#import "TGCameraViewController.h"
 
 //----------------------------------------------//
 
-@interface PreferenceViewController () < UITextFieldDelegate, ProBtnDelegate > {
+@interface PreferenceViewController () < UITextFieldDelegate, ProBtnDelegate, UIImagePickerControllerDelegate> {
     dispatch_queue_t mQueue;
     ContentPreference* mContentPreference;
     FG_SAFE_UNRETAINED(UITextField*) mCurrentField;
@@ -108,6 +109,7 @@
     CGSize contentSize = [mContentPreference contentSize];
     NSString* hintText = [mContentPreference hintText];
     
+    [[self backgroundUrl] setAutocorrectionType:UITextAutocorrectionTypeNo];
     [[self backgroundUrl] setText:backgroundUrl];
     if(([buttonImageUrl length] > 0) && (buttonImage != defaultButtonImage)) {
         [[self buttonImageType] setSelectedSegmentIndex:1];
@@ -116,10 +118,12 @@
         [[self buttonImageType] setSelectedSegmentIndex:0];
         [[self buttonImageUrl] setEnabled:NO];
     }
+    [[self buttonImageUrl] setAutocorrectionType:UITextAutocorrectionTypeNo];
     [[self buttonImageUrl] setText:buttonImageUrl];
     [[self buttonSizeW] setText:[NSString stringWithFormat:@"%0.1f", buttonSize.width]];
     [[self buttonSizeH] setText:[NSString stringWithFormat:@"%0.1f", buttonSize.height]];
     [[self buttonOpen] setEnabled:([ProBtn isOpened] == NO)];
+    [[self contentUrl] setAutocorrectionType:UITextAutocorrectionTypeNo];
     [[self contentUrl] setText:contentUrl];
     [[self contentSizeW] setText:[NSString stringWithFormat:@"%0.1f", contentSize.width]];
     [[self contentSizeH] setText:[NSString stringWithFormat:@"%0.1f", contentSize.height]];
@@ -266,7 +270,9 @@
                         dispatch_sync(dispatch_get_main_queue(), ^{
                             if(image != nil) {
                                 [mContentPreference setButtonImageUrl:fullButtonImageUrl];
+                                [mContentPreference setButtonOpenImageUrl:fullButtonImageUrl];
                                 [mContentPreference setButtonImage:image];
+                                [mContentPreference setButtonOpenImage:image];
                                 [mContentPreference applyPreference];
                             } else {
                                 UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
@@ -359,6 +365,11 @@
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         UIMenuController *menu = [UIMenuController sharedMenuController];
+        if (mCurrentField == [self buttonImageUrl]) {
+            [menu setMenuItems:[NSArray arrayWithObjects:
+                                [[UIMenuItem alloc] initWithTitle:@"From device" action:@selector(fromDevice)],
+                                nil]];
+        }
         if ([[mCurrentField text] length] > 0) {
             [menu setTargetRect:mCurrentField.frame inView:mCurrentField.superview];
         } else {
@@ -368,6 +379,27 @@
         }
         [menu setMenuVisible:YES animated:YES];
     });
+}
+
+-(void) fromDevice {
+    UIImagePickerController *pickerController =
+    [TGAlbum imagePickerControllerWithDelegate:self];
+    [self presentViewController:pickerController animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary*)info {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image = [TGAlbum imageWithMediaInfo:info];
+    [mContentPreference setButtonImageUrl:@""];
+    [mContentPreference setButtonImage:image];
+    [mContentPreference setButtonOpenImage:image];
+    [mContentPreference applyPreference];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController*)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
