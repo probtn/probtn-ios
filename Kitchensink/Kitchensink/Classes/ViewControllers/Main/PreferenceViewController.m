@@ -338,8 +338,13 @@
 
 - (IBAction)onTapEmpty:(id)sender {
     if(mCurrentField != nil) {
-        if (![[mCurrentField text]  isEqual: @""])
-            [mCurrentField resignFirstResponder];
+        if (![[mCurrentField text]  isEqual: @""]) {
+            if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) {
+                [mCurrentField resignFirstResponder];
+            } else {
+                [self enableCurrentTextFieldMenu];
+            }
+        }
         else {
             [self enableCurrentTextFieldMenu];
         }
