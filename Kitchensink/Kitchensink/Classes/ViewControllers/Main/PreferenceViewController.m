@@ -235,6 +235,7 @@
             UIImage* image = [mContentPreference defaultButtonImage];
             if(image != nil) {
                 [mContentPreference setButtonImage:image];
+                [mContentPreference setButtonOpenImage:image];
                 [mContentPreference applyPreference];
             }
             [[self buttonImageUrl] setEnabled:NO];
@@ -354,9 +355,10 @@
 - (NSString *)addProtocoltoUrl:(NSString *)url forTextField:(UITextField *)textField {
     NSString *fullUrl = @"";
     NSString *protocol = @"http://";
+    NSString *protocolssl = @"https://";
     if ([url length] > 0) {
         fullUrl = url;
-        if ([url rangeOfString:protocol].location == NSNotFound) {
+        if ([url rangeOfString:protocol].location == NSNotFound && [url rangeOfString:protocolssl].location == NSNotFound) {
             fullUrl = protocol;
             fullUrl = [fullUrl stringByAppendingString:url];
             [textField setText:fullUrl];
