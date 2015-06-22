@@ -98,7 +98,6 @@
 		4459D1771AE90ADB0062C1D4 /* TGCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4459D1721AE90ADB0062C1D4 /* TGCameraViewController.xib */; };
 		4459D1781AE90ADB0062C1D4 /* TGPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4459D1741AE90ADB0062C1D4 /* TGPhotoViewController.xib */; };
 		4459D17B1AE90B460062C1D4 /* TGCameraAuthorizationViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4459D1791AE90B460062C1D4 /* TGCameraAuthorizationViewController.strings */; };
-		44691C701A82610700736084 /* libProBtn-1.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44691C6F1A82610700736084 /* libProBtn-1.2.3.a */; };
 		75A92C641850EFA3005D04C1 /* eqwid_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C621850EFA3005D04C1 /* eqwid_button_active@2x.png */; };
 		75A92C651850EFA3005D04C1 /* eqwid_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C631850EFA3005D04C1 /* eqwid_button@2x.png */; };
 		75A92C6C1851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C681851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png */; };
@@ -108,6 +107,7 @@
 		75A92C741851F045005D04C1 /* icon_chicago_bulls1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C721851F045005D04C1 /* icon_chicago_bulls1@2x.png */; };
 		75A92C751851F045005D04C1 /* icon_chicago_bulls2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C731851F045005D04C1 /* icon_chicago_bulls2@2x.png */; };
 		75A92C771851F09A005D04C1 /* icon_eqwid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C761851F09A005D04C1 /* icon_eqwid@2x.png */; };
+		9A9233391B389E5D005CD6BC /* libProBtn-1.2.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9233381B389E5D005CD6BC /* libProBtn-1.2.4.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,6 +264,7 @@
 		75A92C721851F045005D04C1 /* icon_chicago_bulls1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chicago_bulls1@2x.png"; sourceTree = "<group>"; };
 		75A92C731851F045005D04C1 /* icon_chicago_bulls2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chicago_bulls2@2x.png"; sourceTree = "<group>"; };
 		75A92C761851F09A005D04C1 /* icon_eqwid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_eqwid@2x.png"; sourceTree = "<group>"; };
+		9A9233381B389E5D005CD6BC /* libProBtn-1.2.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.4.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,13 +273,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				40DB19AE182C353300BA4CC1 /* SystemConfiguration.framework in Frameworks */,
-				44691C701A82610700736084 /* libProBtn-1.2.3.a in Frameworks */,
 				40B824A6180BCB4300DDA03A /* Foundation.framework in Frameworks */,
 				40B824ED180BCB7500DDA03A /* CoreLocation.framework in Frameworks */,
 				40B824A8180BCB4300DDA03A /* CoreGraphics.framework in Frameworks */,
 				40B824EB180BCB6F00DDA03A /* QuartzCore.framework in Frameworks */,
 				40B824AA180BCB4300DDA03A /* UIKit.framework in Frameworks */,
 				406174311817DD9B0098E72A /* CoreTelephony.framework in Frameworks */,
+				9A9233391B389E5D005CD6BC /* libProBtn-1.2.4.a in Frameworks */,
 				405567D81817FB2500AFDFC8 /* AdSupport.framework in Frameworks */,
 				405567D61817FB1B00AFDFC8 /* libz.dylib in Frameworks */,
 				405567D21817FA4500AFDFC8 /* libTestFlight.a in Frameworks */,
@@ -441,6 +442,7 @@
 		40836388183CC92500BDF636 /* ProBtn */ = {
 			isa = PBXGroup;
 			children = (
+				9A9233381B389E5D005CD6BC /* libProBtn-1.2.4.a */,
 				44691C6F1A82610700736084 /* libProBtn-1.2.3.a */,
 				44691C6D1A8260FE00736084 /* libProBtn-1.2.2.a */,
 				44D33FAD1A24CE0F00C417D4 /* libProBtn-1.2.1.a */,
@@ -975,6 +977,7 @@
 					"$(SRCROOT)/Kitchensink/Library/TestFlight/",
 					"$(SRCROOT)/../Library/",
 					"/Users/viktorbaranov/Documents/HintsProjects/probtn-ios/Library",
+					"/Users/hints/HintsProjects/probtn-ios/Library",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
@@ -1001,6 +1004,7 @@
 					"$(SRCROOT)/Kitchensink/Library/TestFlight/",
 					"$(SRCROOT)/../Library/",
 					"/Users/viktorbaranov/Documents/HintsProjects/probtn-ios/Library",
+					"/Users/hints/HintsProjects/probtn-ios/Library",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
