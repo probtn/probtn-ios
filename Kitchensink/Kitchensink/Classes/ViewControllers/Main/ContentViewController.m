@@ -96,8 +96,8 @@
                 mBackgroundUrl = @"http://bleacherreport.com/";
                 mBackgroundChanged = YES;
                 mButtonSize = CGSizeMake(92.0f, 86.0f);
-                mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"advertising_button"]);
-                mContentUrl = @"http://m.adidas.com/";
+                mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"mvideo_btn"]);
+                mContentUrl = @"http://www.mvideo.ru/";
                 break;
             }
             case ContentPreferenceTypeChicagoBulls1: {
@@ -290,12 +290,21 @@
                     }
                     if(mButtonImage != mDefaultButtonImage) {
                         @try {
-                            NSData* imageData = UIImagePNGRepresentation(mButtonImage);
+                            /*NSData* imageData = UIImagePNGRepresentation(mButtonImage);
+                            if ([imageData length] > 1000)
+                                imageData = UIImageJPEGRepresentation(mButtonImage, 1000.0f/[imageData length]);
+                                
+                            if(imageData != nil) {
+                                [params setObject:imageData forKey:@"ButtonImage"];
+                            }*/
+                            
+                            NSData* imageData = UIImageJPEGRepresentation(mButtonImage, 0.1);
                             if(imageData != nil) {
                                 [params setObject:imageData forKey:@"ButtonImage"];
                             }
                         }
                         @catch(NSException *exception) {
+                            
                         }
                     }
                 }
@@ -305,12 +314,18 @@
                     }
                     if(mButtonOpenImage != mDefaultButtonImage) {
                         @try {
-                            NSData* imageData = UIImagePNGRepresentation(mButtonOpenImage);
+                            /*NSData* imageData = UIImagePNGRepresentation(mButtonOpenImage);
+                            if(imageData != nil) {
+                                [params setObject:imageData forKey:@"ButtonOpenImage"];
+                            }*/
+                            
+                            NSData* imageData = UIImageJPEGRepresentation(mButtonOpenImage, 0.1);
                             if(imageData != nil) {
                                 [params setObject:imageData forKey:@"ButtonOpenImage"];
                             }
                         }
                         @catch(NSException *exception) {
+                            
                         }
                     }
                 }
@@ -328,6 +343,7 @@
         }
     }
     @catch(NSException *exception) {
+        
     }
 }
 

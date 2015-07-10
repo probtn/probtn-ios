@@ -10,7 +10,7 @@
 		406812E817FB6C83009EE02E /* ProBtnAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E517FB6C83009EE02E /* ProBtnAppDelegate.m */; };
 		406812E917FB6C83009EE02E /* ProBtnControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E717FB6C83009EE02E /* ProBtnControlViewController.m */; };
 		40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */; };
-		44C90EA31B45950200E19CEC /* libProBtn-1.2.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C90EA21B45950200E19CEC /* libProBtn-1.2.5.a */; };
+		44BCF1971B4E7E2400564710 /* libProBtn-1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB1D45219E4290E00FBC812 /* libProBtn-1.2.a */; };
 		7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7531A60B17CE0823007D46CC /* QuartzCore.framework */; };
 		7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E40A3A178D4D55003B5AF9 /* CoreGraphics.framework */; };
 		7585FE2117B37DE6000FCFC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7585FE1817B37DE6000FCFC2 /* InfoPlist.strings */; };
@@ -75,7 +75,7 @@
 				7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */,
 				75999B0117A1630D00BB9132 /* CoreLocation.framework in Frameworks */,
 				40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */,
-				44C90EA31B45950200E19CEC /* libProBtn-1.2.5.a in Frameworks */,
+				44BCF1971B4E7E2400564710 /* libProBtn-1.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
