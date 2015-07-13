@@ -991,7 +991,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "0f6b542a-133d-47eb-a0c0-46dc9fde43df";
+				PROVISIONING_PROFILE = "484038a5-8763-4737-ac53-40daf1455cb5";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
@@ -1003,8 +1003,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Havevalue Ltd (69MLH8NUC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Havevalue Ltd (69MLH8NUC5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kitchensink/Kitchensink-Prefix.pch";
 				INFOPLIST_FILE = "Kitchensink/Kitchensink-Info.plist";
@@ -1018,7 +1018,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "96293077-98ff-44fb-9b60-3e07290e7e91";
+				PROVISIONING_PROFILE = "eccd84be-40da-4ea3-9cd2-c22f1055260c";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
