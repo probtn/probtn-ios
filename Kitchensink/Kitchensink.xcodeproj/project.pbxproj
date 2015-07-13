@@ -1018,7 +1018,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "kitchensink-ecwid";
-				PROVISIONING_PROFILE = "eccd84be-40da-4ea3-9cd2-c22f1055260c";
+				PROVISIONING_PROFILE = "6b6b1b9c-5a80-47f7-b5d1-5dc12118910e";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s i386";
 				WRAPPER_EXTENSION = app;
