@@ -75,7 +75,7 @@
         
         switch(mType) {
             case ContentPreferenceTypeSurvey: {
-                mBackgroundUrl = @"http://mobile.nytimes.com/";
+                mBackgroundUrl = @"https://goo.gl/ru2I5L"; //@"http://mobile.nytimes.com/";
                 mBackgroundChanged = YES;
                 mButtonSize = CGSizeMake(64.0f, 64.0f);
                 mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"survey_button"]);
@@ -93,7 +93,7 @@
                 break;
             }
             case ContentPreferenceTypeAdvertising: {
-                mBackgroundUrl = @"http://bleacherreport.com/";
+                mBackgroundUrl = @"https://goo.gl/teSpZO";//@"http://bleacherreport.com/";
                 mBackgroundChanged = YES;
                 mButtonSize = CGSizeMake(92.0f, 86.0f);
                 mDefaultButtonImage = FG_SAFE_RETAIN([UIImage imageNamed:@"mvideo_btn"]);
