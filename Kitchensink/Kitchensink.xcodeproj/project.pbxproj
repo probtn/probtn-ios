@@ -55,6 +55,7 @@
 		40E69776180F2C3B00F01318 /* LaunchViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69775180F2C3B00F01318 /* LaunchViewController-iPad.xib */; };
 		40E69778180F2D2400F01318 /* ContentViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69777180F2D2400F01318 /* ContentViewController-iPad.xib */; };
 		40E6977A180F2D4100F01318 /* MainMenuController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69779180F2D4100F01318 /* MainMenuController-iPad.xib */; };
+		443681F81B67DFE800552889 /* libProBtn-1.2.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443681F71B67DFE800552889 /* libProBtn-1.2.6.a */; };
 		4459D10F1AE90A5F0062C1D4 /* UIImage+CameraFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = 4459D10E1AE90A5F0062C1D4 /* UIImage+CameraFilters.m */; };
 		4459D1181AE90A6A0062C1D4 /* TGCameraAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4459D1111AE90A6A0062C1D4 /* TGCameraAuthorizationViewController.m */; };
 		4459D1191AE90A6A0062C1D4 /* TGCameraNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4459D1131AE90A6A0062C1D4 /* TGCameraNavigationController.m */; };
@@ -100,7 +101,6 @@
 		4459D17B1AE90B460062C1D4 /* TGCameraAuthorizationViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4459D1791AE90B460062C1D4 /* TGCameraAuthorizationViewController.strings */; };
 		44BCF19B1B4E8CE100564710 /* mvideo_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BCF1991B4E8CE100564710 /* mvideo_btn.png */; };
 		44BCF19C1B4E8CE100564710 /* mvideo_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BCF19A1B4E8CE100564710 /* mvideo_btn@2x.png */; };
-		44C90EA51B45951E00E19CEC /* libProBtn-1.2.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C90EA41B45951E00E19CEC /* libProBtn-1.2.5.a */; };
 		75A92C641850EFA3005D04C1 /* eqwid_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C621850EFA3005D04C1 /* eqwid_button_active@2x.png */; };
 		75A92C651850EFA3005D04C1 /* eqwid_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C631850EFA3005D04C1 /* eqwid_button@2x.png */; };
 		75A92C6C1851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C681851E1EA005D04C1 /* chicago_bulls2_button_active@2x.png */; };
@@ -188,6 +188,7 @@
 		40E69775180F2C3B00F01318 /* LaunchViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "LaunchViewController-iPad.xib"; sourceTree = "<group>"; };
 		40E69777180F2D2400F01318 /* ContentViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ContentViewController-iPad.xib"; sourceTree = "<group>"; };
 		40E69779180F2D4100F01318 /* MainMenuController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainMenuController-iPad.xib"; sourceTree = "<group>"; };
+		443681F71B67DFE800552889 /* libProBtn-1.2.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.6.a"; sourceTree = "<group>"; };
 		4459D10D1AE90A5F0062C1D4 /* UIImage+CameraFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CameraFilters.h"; path = "TGCameraViewController/Category/UIImage+CameraFilters.h"; sourceTree = "<group>"; };
 		4459D10E1AE90A5F0062C1D4 /* UIImage+CameraFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CameraFilters.m"; path = "TGCameraViewController/Category/UIImage+CameraFilters.m"; sourceTree = "<group>"; };
 		4459D1101AE90A6A0062C1D4 /* TGCameraAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TGCameraAuthorizationViewController.h; path = TGCameraViewController/Control/TGCameraAuthorizationViewController.h; sourceTree = "<group>"; };
@@ -281,11 +282,11 @@
 				40B824A6180BCB4300DDA03A /* Foundation.framework in Frameworks */,
 				40B824ED180BCB7500DDA03A /* CoreLocation.framework in Frameworks */,
 				40B824A8180BCB4300DDA03A /* CoreGraphics.framework in Frameworks */,
+				443681F81B67DFE800552889 /* libProBtn-1.2.6.a in Frameworks */,
 				40B824EB180BCB6F00DDA03A /* QuartzCore.framework in Frameworks */,
 				40B824AA180BCB4300DDA03A /* UIKit.framework in Frameworks */,
 				406174311817DD9B0098E72A /* CoreTelephony.framework in Frameworks */,
 				405567D81817FB2500AFDFC8 /* AdSupport.framework in Frameworks */,
-				44C90EA51B45951E00E19CEC /* libProBtn-1.2.5.a in Frameworks */,
 				405567D61817FB1B00AFDFC8 /* libz.dylib in Frameworks */,
 				405567D21817FA4500AFDFC8 /* libTestFlight.a in Frameworks */,
 			);
@@ -447,6 +448,7 @@
 		40836388183CC92500BDF636 /* ProBtn */ = {
 			isa = PBXGroup;
 			children = (
+				443681F71B67DFE800552889 /* libProBtn-1.2.6.a */,
 				44C90EA41B45951E00E19CEC /* libProBtn-1.2.5.a */,
 				9A9233381B389E5D005CD6BC /* libProBtn-1.2.4.a */,
 				44691C6F1A82610700736084 /* libProBtn-1.2.3.a */,
