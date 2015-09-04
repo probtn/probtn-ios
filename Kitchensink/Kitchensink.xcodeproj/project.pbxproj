@@ -55,7 +55,6 @@
 		40E69776180F2C3B00F01318 /* LaunchViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69775180F2C3B00F01318 /* LaunchViewController-iPad.xib */; };
 		40E69778180F2D2400F01318 /* ContentViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69777180F2D2400F01318 /* ContentViewController-iPad.xib */; };
 		40E6977A180F2D4100F01318 /* MainMenuController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40E69779180F2D4100F01318 /* MainMenuController-iPad.xib */; };
-		443681F81B67DFE800552889 /* libProBtn-1.2.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443681F71B67DFE800552889 /* libProBtn-1.2.6.a */; };
 		4459D10F1AE90A5F0062C1D4 /* UIImage+CameraFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = 4459D10E1AE90A5F0062C1D4 /* UIImage+CameraFilters.m */; };
 		4459D1181AE90A6A0062C1D4 /* TGCameraAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4459D1111AE90A6A0062C1D4 /* TGCameraAuthorizationViewController.m */; };
 		4459D1191AE90A6A0062C1D4 /* TGCameraNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4459D1131AE90A6A0062C1D4 /* TGCameraNavigationController.m */; };
@@ -99,6 +98,7 @@
 		4459D1771AE90ADB0062C1D4 /* TGCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4459D1721AE90ADB0062C1D4 /* TGCameraViewController.xib */; };
 		4459D1781AE90ADB0062C1D4 /* TGPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4459D1741AE90ADB0062C1D4 /* TGPhotoViewController.xib */; };
 		4459D17B1AE90B460062C1D4 /* TGCameraAuthorizationViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4459D1791AE90B460062C1D4 /* TGCameraAuthorizationViewController.strings */; };
+		4483A1261B99F23200871991 /* libProBtn-1.2.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4483A1241B99F22700871991 /* libProBtn-1.2.7.a */; };
 		44BCF19B1B4E8CE100564710 /* mvideo_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BCF1991B4E8CE100564710 /* mvideo_btn.png */; };
 		44BCF19C1B4E8CE100564710 /* mvideo_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 44BCF19A1B4E8CE100564710 /* mvideo_btn@2x.png */; };
 		75A92C641850EFA3005D04C1 /* eqwid_button_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A92C621850EFA3005D04C1 /* eqwid_button_active@2x.png */; };
@@ -257,6 +257,7 @@
 		44691C6D1A8260FE00736084 /* libProBtn-1.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.2.a"; sourceTree = "<group>"; };
 		44691C6F1A82610700736084 /* libProBtn-1.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.3.a"; sourceTree = "<group>"; };
 		4473101B1A136D5C000F520D /* libProBtn-1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.a"; sourceTree = "<group>"; };
+		4483A1241B99F22700871991 /* libProBtn-1.2.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.7.a"; sourceTree = "<group>"; };
 		44BCF1991B4E8CE100564710 /* mvideo_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mvideo_btn.png; sourceTree = "<group>"; };
 		44BCF19A1B4E8CE100564710 /* mvideo_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mvideo_btn@2x.png"; sourceTree = "<group>"; };
 		44C90EA41B45951E00E19CEC /* libProBtn-1.2.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.5.a"; sourceTree = "<group>"; };
@@ -278,11 +279,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4483A1261B99F23200871991 /* libProBtn-1.2.7.a in Frameworks */,
 				40DB19AE182C353300BA4CC1 /* SystemConfiguration.framework in Frameworks */,
 				40B824A6180BCB4300DDA03A /* Foundation.framework in Frameworks */,
 				40B824ED180BCB7500DDA03A /* CoreLocation.framework in Frameworks */,
 				40B824A8180BCB4300DDA03A /* CoreGraphics.framework in Frameworks */,
-				443681F81B67DFE800552889 /* libProBtn-1.2.6.a in Frameworks */,
 				40B824EB180BCB6F00DDA03A /* QuartzCore.framework in Frameworks */,
 				40B824AA180BCB4300DDA03A /* UIKit.framework in Frameworks */,
 				406174311817DD9B0098E72A /* CoreTelephony.framework in Frameworks */,
@@ -448,6 +449,7 @@
 		40836388183CC92500BDF636 /* ProBtn */ = {
 			isa = PBXGroup;
 			children = (
+				4483A1241B99F22700871991 /* libProBtn-1.2.7.a */,
 				443681F71B67DFE800552889 /* libProBtn-1.2.6.a */,
 				44C90EA41B45951E00E19CEC /* libProBtn-1.2.5.a */,
 				9A9233381B389E5D005CD6BC /* libProBtn-1.2.4.a */,
