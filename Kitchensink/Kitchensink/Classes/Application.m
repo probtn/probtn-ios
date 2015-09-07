@@ -4,7 +4,7 @@
 
 //----------------------------------------------//
 
-#import "TestFlight.h"
+//#import "TestFlight.h"
 
 //----------------------------------------------//
 
@@ -35,7 +35,7 @@
 - (void)applicationDidFinishLaunching:(UIApplication*)application {
     NSTimeInterval time = [NSDate timeIntervalSinceReferenceDate];
     
-    [TestFlight takeOff:@"cd7b14b8-b0d6-40d2-8bc8-b4977df02b92"];
+    //[TestFlight takeOff:@"cd7b14b8-b0d6-40d2-8bc8-b4977df02b92"];
     
     mWindow = FG_SAFE_RETAIN([Window windowWithFrame:[[UIScreen mainScreen] bounds]]);
     if(mWindow != nil) {
