@@ -424,6 +424,10 @@ typedef NS_OPTIONS(NSUInteger, ProBtnInterfaceOrientationMask) {
 @property(nonatomic, readwrite) BOOL hideAfterFirstShow;
 #endif
 
+#if (PROBTN_VERSION >= PROBTN_VERSION_1_2_8)
+@property(nonatomic, readwrite, strong) NSString* buttonContentType;
+#endif
+
 @property(nonatomic, readwrite) NSTimeInterval defaultDuration;
 @property(nonatomic, readwrite) NSTimeInterval defaultDelay;
 

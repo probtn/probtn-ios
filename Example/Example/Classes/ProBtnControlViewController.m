@@ -104,14 +104,24 @@
 - (IBAction)applyUserSettings1Pressed:(id)sender {
     id< ProBtnSettings > settings = [ProBtn userSettings];
     [settings setButtonSize:CGSizeMake(100.0f, 100.0f)];
-    [settings setContentURL:[NSURL URLWithString:@"http://survey.probtn.com/5232e2caadae230200000001"]];
+    [settings setContentURL:[NSURL URLWithString:@"https://survey.probtn.com/5232e2caadae230200000001"]];
+    [settings setButtonContentType: @"iframe"];
     [ProBtn setUserSettings:settings];
 }
 
 - (IBAction)applyUserSettings2Pressed:(id)sender {
     id< ProBtnSettings > settings = [ProBtn userSettings];
     [settings setButtonSize:CGSizeMake(180.0f, 180.0f)];
-    [settings setContentURL:[NSURL URLWithString:@"http://www.gmail.com"]];
+    [settings setContentURL:[NSURL URLWithString:@"https://probtn.com/"]];
+    [settings setButtonContentType: @"iframe"];
+    [ProBtn setUserSettings:settings];
+}
+
+- (IBAction)applyUserSettings3Pressed:(id)sender {
+    id< ProBtnSettings > settings = [ProBtn userSettings];
+    [settings setButtonSize:CGSizeMake(120.0f, 120.0f)];
+    [settings setContentURL:[NSURL URLWithString:@"https://demo.probtn.com/video/1-simple_x264_001.mp4"]];
+    [settings setButtonContentType: @"video"];
     [ProBtn setUserSettings:settings];
 }
 

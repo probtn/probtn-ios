@@ -10,7 +10,8 @@
 		406812E817FB6C83009EE02E /* ProBtnAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E517FB6C83009EE02E /* ProBtnAppDelegate.m */; };
 		406812E917FB6C83009EE02E /* ProBtnControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406812E717FB6C83009EE02E /* ProBtnControlViewController.m */; };
 		40DB19B4182C451F00BA4CC1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */; };
-		4483A1231B99F0CC00871991 /* libProBtn-1.2.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4483A1211B99F0C600871991 /* libProBtn-1.2.7.a */; };
+		4468A7881D65CDED00B63987 /* libProBtn-1.2.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4468A7831D65CB8200B63987 /* libProBtn-1.2.8.a */; };
+		4468A7901D65D51C00B63987 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4468A78F1D65D51C00B63987 /* MediaPlayer.framework */; };
 		7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7531A60B17CE0823007D46CC /* QuartzCore.framework */; };
 		7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40E40A3A178D4D55003B5AF9 /* CoreGraphics.framework */; };
 		7585FE2117B37DE6000FCFC2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7585FE1817B37DE6000FCFC2 /* InfoPlist.strings */; };
@@ -43,6 +44,8 @@
 		40E40A38178D4D55003B5AF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		40E40A3A178D4D55003B5AF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		443681F51B67DFCA00552889 /* libProBtn-1.2.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.6.a"; sourceTree = "<group>"; };
+		4468A7831D65CB8200B63987 /* libProBtn-1.2.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.8.a"; sourceTree = "<group>"; };
+		4468A78F1D65D51C00B63987 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		44691C6B1A825E2400736084 /* libProBtn-1.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.3.a"; sourceTree = "<group>"; };
 		4483A1211B99F0C600871991 /* libProBtn-1.2.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.7.a"; sourceTree = "<group>"; };
 		44C90EA21B45950200E19CEC /* libProBtn-1.2.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libProBtn-1.2.5.a"; sourceTree = "<group>"; };
@@ -72,7 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4483A1231B99F0CC00871991 /* libProBtn-1.2.7.a in Frameworks */,
+				4468A7881D65CDED00B63987 /* libProBtn-1.2.8.a in Frameworks */,
+				4468A7901D65D51C00B63987 /* MediaPlayer.framework in Frameworks */,
 				7531A60C17CE0823007D46CC /* QuartzCore.framework in Frameworks */,
 				75999B0217A1631700BB9132 /* UIKit.framework in Frameworks */,
 				7531A60D17CE08FF007D46CC /* CoreGraphics.framework in Frameworks */,
@@ -104,6 +108,7 @@
 		40E40A35178D4D55003B5AF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4468A78F1D65D51C00B63987 /* MediaPlayer.framework */,
 				40DB19B3182C451F00BA4CC1 /* CoreTelephony.framework */,
 				7531A60B17CE0823007D46CC /* QuartzCore.framework */,
 				75CCA843179FE6FC00A4A4E9 /* CoreLocation.framework */,
@@ -174,6 +179,7 @@
 		7585FE4F17B3959E000FCFC2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				4468A7831D65CB8200B63987 /* libProBtn-1.2.8.a */,
 				4483A1211B99F0C600871991 /* libProBtn-1.2.7.a */,
 				443681F51B67DFCA00552889 /* libProBtn-1.2.6.a */,
 				44C90EA21B45950200E19CEC /* libProBtn-1.2.5.a */,
@@ -310,8 +316,10 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -328,6 +336,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,8 +353,10 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -355,6 +366,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
