@@ -25,7 +25,7 @@ Integrating ProBtn SDK into your ObjC iOS App
 1. First you are to clone repository or just download the archive to you computer.
 2. Add file libProBtn-1.x.a to your project (Target -> Build Phases -> Link Binary With Libraries).
 3. Add header files ProBtn.h and ProBtnVersion.h to you project.
-4. Add  QuartzCore.framework, UIKit.framework, CoreGraphics.framework, CoreLocation.framework to your project Build Phases -> Link Binary With Libraries
+4. Add  QuartzCore.framework, UIKit.framework, CoreGraphics.framework, CoreLocation.framework, MediaPlayer.framework to your project Build Phases -> Link Binary With Libraries
 5. Import the file ProBtn.h with the derictive #import "ProBtn.h"
 6. After your app was initialised you have to call method [ProBtn open] 
 7. By default all the screen orientations are supported. You can restrict anyone of them in any time by calling method  [ProBtn setAvailableOrientations:]
